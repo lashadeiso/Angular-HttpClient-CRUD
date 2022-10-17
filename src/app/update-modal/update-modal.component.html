@@ -1,0 +1,93 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+  [ngClass]="{ showModal: showOrHideModal }"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form
+        (ngSubmit)="ngFormSubmit(updateForm)"
+        #updateForm="ngForm"
+        *ngIf="showOrHideModal"
+      >
+        <div class="form-group">
+          <label for="">Enter your First Name</label>
+          <input
+            ngModel
+            [(ngModel)]="updateStudent.firstName"
+            name="firstName"
+            type="text"
+            placeholder="Enter here"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="">Enter your Last Name</label>
+          <input
+            ngModel
+            [(ngModel)]="updateStudent.lastName"
+            name="lastName"
+            type="text"
+            placeholder="Enter here"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="">Enter your Email</label>
+          <input
+            ngModel
+            [(ngModel)]="updateStudent.email"
+            name="email"
+            type="text"
+            placeholder="Enter here"
+            class="form-control"
+          />
+        </div>
+        <div ngModelGroup="location">
+          <div class="form-group">
+            <label for="">Enter Country</label>
+            <input
+              ngModel
+              [(ngModel)]="updateStudent.adress.country"
+              name="country"
+              type="text"
+              class="form-control"
+              placeholder="Enter here"
+            />
+
+            <div class="form-group">
+              <label for="">Enter City</label>
+              <input
+                [(ngModel)]="updateStudent.adress.city"
+                ngModel
+                name="city"
+                type="text"
+                class="form-control"
+                placeholder="Enter here"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-warning">Update</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="onCloseModal()"
+          >
+            Close
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

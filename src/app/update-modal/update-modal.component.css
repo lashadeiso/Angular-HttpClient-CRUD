@@ -1,0 +1,17 @@
+.showModal {
+  background-color: rgba(20, 94, 185, 0.2);
+  opacity: 1;
+  display: block;
+  align-items: center;
+}
+
+.modal-dialog {
+  padding: 2% 2%;
+  margin-top: 5%;
+}
+.modal-content {
+  padding: 5% 5%;
+}
+.form-group {
+  margin: 2% 0;
+}

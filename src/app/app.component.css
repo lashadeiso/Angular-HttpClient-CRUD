@@ -1,0 +1,16 @@
+.render-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2.5rem 2.5rem;
+}
+
+.driven-form {
+  height: 80vh;
+  width: 25%;
+}
+
+.students-list {
+  height: 80vh;
+  width: 65%;
+}

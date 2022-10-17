@@ -1,0 +1,67 @@
+<form (ngSubmit)="onSubmit(inputForms)" #inputForms="ngForm">
+  <h5>Enter Students Information</h5>
+
+  <div class="form-group">
+    <label for="">Enter your First Name</label>
+    <input
+      required
+      ngModel
+      name="firstName"
+      type="text"
+      placeholder="Enter here"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="">Enter your Last Name</label>
+    <input
+      required
+      ngModel
+      name="lastName"
+      type="text"
+      placeholder="Enter here"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="">Enter your Email</label>
+    <input
+      required
+      ngModel
+      name="email"
+      type="text"
+      placeholder="Enter here"
+      class="form-control"
+    />
+  </div>
+  <!-- დაგრუპვა-->
+  <div ngModelGroup="adress">
+    <div class="form-group">
+      <label for="">Enter Country</label>
+      <input
+        required
+        ngModel
+        name="country"
+        type="text"
+        class="form-control"
+        placeholder="Enter here"
+      />
+
+      <div class="form-group">
+        <label for="">Enter City</label>
+        <input
+          required
+          ngModel
+          name="city"
+          type="text"
+          class="form-control"
+          placeholder="Enter here"
+        />
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-dark col-md-12 d-block">Save</button>
+  </div>
+</form>
